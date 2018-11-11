@@ -2,9 +2,9 @@
 
 This program will numerically compute the integral of
 
-                  4/(1+x*x) 
-			  
-from 0 to 1.  The value of this integral is pi -- which 
+                  4/(1+x*x)
+
+from 0 to 1.  The value of this integral is pi -- which
 is great since it gives us an easy way to check the answer.
 
 This version of the program uses a divide and concquer algorithm
@@ -24,7 +24,7 @@ double pi_comp(int Nstart,int Nfinish,double step)
    if (Nfinish-Nstart < MIN_BLK){
       for (i=Nstart;i< Nfinish; i++){
          x = (i+0.5)*step;
-         sum = sum + 4.0/(1.0+x*x); 
+         sum = sum + 4.0/(1.0+x*x);
       }
    }
    else{
@@ -46,5 +46,5 @@ double pi_comp(int Nstart,int Nfinish,double step)
    pi = step * sum;
    final_time = omp_get_wtime() - init_time;
    printf(" for %ld steps pi = %f in %f secs\n",num_steps,pi,final_time);
-  
- }  
+
+ }
