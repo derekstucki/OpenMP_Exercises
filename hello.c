@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-int main ()  
+int main ()
 {
     #pragma omp parallel
     {
